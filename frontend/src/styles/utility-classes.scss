@@ -1,0 +1,119 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.display {
+  $properties: inline, inline-block, block, flex, none;
+
+  @each $property in $properties {
+    &-#{$property} {
+      display: $property;
+    }
+  }
+}
+
+.overflow {
+  $properties: hidden, visible, scroll;
+
+  @each $property in $properties {
+    &-#{$property} {
+      overflow: $property !important;
+    }
+  }
+}
+
+.align-text {
+  $properties: left, center, right, justify;
+
+  @each $property in $properties {
+    &-#{$property} {
+      text-align: $property;
+    }
+  }
+}
+
+.align-items {
+  $properties: (
+    "start": flex-start,
+    "center": center,
+    "end": flex-end
+  );
+
+  @each $name, $value in $properties {
+    &-#{$name} {
+      align-items: $value;
+    }
+  }
+}
+
+.align-self {
+  $properties: (
+    "start": flex-start,
+    "center": center,
+    "end": flex-end
+  );
+
+  @each $name, $value in $properties {
+    &-#{$name} {
+      align-self: $value;
+    }
+  }
+}
+
+.align-content {
+  $properties: (
+    "start": flex-start,
+    "center": center,
+    "end": flex-end
+  );
+
+  @each $name, $value in $properties {
+    &-#{$name} {
+      align-content: $value;
+    }
+  }
+}
+
+.justify-items {
+  $properties: (
+    "start": flex-start,
+    "center": center,
+    "end": flex-end
+  );
+
+  @each $name, $value in $properties {
+    &-#{$name} {
+      justify-items: $value;
+    }
+  }
+}
+
+.justify-self {
+  $properties: (
+    "start": flex-start,
+    "center": center,
+    "end": flex-end
+  );
+
+  @each $name, $value in $properties {
+    &-#{$name} {
+      justify-self: $value;
+    }
+  }
+}
+
+.justify-content {
+  $properties: (
+    "start": flex-start,
+    "center": center,
+    "end": flex-end,
+    "space-between": space-between,
+    "space-around": space-around,
+    "space-evenly": space-evenly
+  );
+
+  @each $name, $value in $properties {
+    &-#{$name} {
+      justify-content: $value !important;
+    }
+  }
+}

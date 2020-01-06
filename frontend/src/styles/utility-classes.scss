@@ -117,3 +117,21 @@
     }
   }
 }
+
+.flex-wrapper {
+  $wrapperTypes: row, column;
+
+  position: relative;
+  width: 100%;
+
+  @each $wrapperType in $wrapperTypes {
+    &-#{$wrapperType} {
+      @include flex($wrapperType);
+    }
+  }
+}
+
+.center-content {
+  position: relative;
+  margin: auto;
+}
